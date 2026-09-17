@@ -1,213 +1,121 @@
 ﻿LABELS
+
 Warner Records
- 
 Date de création : 19 / 03 / 1958
 
-
 Roadrunner Records
- 
 Date de création : 01 / 01 / 1980
 
-
 Universal Music Group
- 
 Date de création : 01 / 09 / 1934
 
-
 Sony Music
- 
 Date de création : 05 / 03 / 1929
 
 
 ARTISTES
+
 Linkin Park
- 
 Bio : Groupe de nu - metal américain formé à Agoura Hills.
- 
 Label rattaché : Warner Records
  
 Papa Roach
- 
 Bio : Groupe de rock alternatif américain originaire de Vacaville.
- 
 Label rattaché : Warner Records
  
 Rammstein
- 
 Bio : Groupe de metal industriel allemand originaire de Berlin.
- 
 Label rattaché : Universal Music Group
  
 Metallica
- 
 Bio : Groupe de heavy metal américain originaire de Los Angeles.
- 
 Label rattaché : Universal Music Group
- 
+
 System of a Down
- 
 Bio : Groupe de metal alternatif américain originaire de Californie.
- 
 Label rattaché : Sony Music
  
 Three Days Grace
- 
 Bio : Groupe de rock canadien originaire de Norwood.
- 
 Label rattaché : Sony Music
  
 Slipknot
- 
 Bio : Groupe de nu - metal américain originaire de Des Moines.
- 
 Label rattaché : Roadrunner Records
  
 Hollywood Undead
- 
 Bio : Groupe de rap - rock américain originaire de Los Angeles.
- 
 Label rattaché : Universal Music Group
  
 ALBUMS & PISTES
+
 Hybrid Theory
- 
 Date de sortie : 24 / 10 / 2000
-
-
 Artiste(s) : Linkin Park
- 
 Pistes :
- 
 Papercut(184 secondes)
-
-
 One Step Closer (155 secondes)
- 
 In the End (216 secondes)
- 
+
 Infest
- 
 Date de sortie : 25 / 04 / 2000
-
-
 Artiste(s) : Papa Roach
- 
 Pistes :
- 
 Infest(249 secondes)
-
-
 Last Resort(199 secondes)
-
-
 Broken Home(221 secondes)
 
-
 Mutter
-
 Date de sortie : 02 / 04 / 2001
-
-
 Artiste(s) : Rammstein
-
 Pistes :
- 
 Mein Herz brennt (280 secondes)
- 
 Sonne (272 secondes)
- 
 Ich will (217 secondes)
  
 Master of Puppets
- 
 Date de sortie : 03 / 03 / 1986
-
-
 Artiste(s) : Metallica
-
 Pistes :
- 
 Battery(312 secondes)
-
-
 Master of Puppets (515 secondes)
- 
 Welcome Home (Sanitarium) (387 secondes)
  
 Toxicity
- 
 Date de sortie : 04 / 09 / 2001
-
-
 Artiste(s) : System of a Down
- 
 Pistes :
- 
 Prison Song(201 secondes)
-
-
 Chop Suey! (210 secondes)
- 
 Toxicity (219 secondes)
  
 One-X
- 
 Date de sortie : 13 / 06 / 2006
-
-
 Artiste(s) : Three Days Grace
- 
 Pistes :
- 
 It's All Over (145 secondes)
- 
 Animal I Have Become (231 secondes)
- 
 Never Too Late (209 secondes)
- 
+
 Iowa
- 
 Date de sortie : 28 / 08 / 2001
-
-
 Artiste(s) : Slipknot
-
 Pistes :
- 
 People = Shit(215 secondes)
-
-
 Disasterpiece(308 secondes)
-
-
 The Heretic Anthem (254 secondes)
  
 Swan Songs
- 
 Date de sortie : 02 / 09 / 2008
-
-
 Artiste(s) : Hollywood Undead
- 
 Pistes :
- 
 Undead(265 secondes)
-
-
 Everywhere I Go (210 secondes)
- 
 No. 5 (185 secondes)
  
 Rock & Nu-Metal Festival 2003 (Album de type compilation / featuring pour tester la relation N-N)
- 
 Date de sortie : 12 / 05 / 2003
-
-
 Artiste(s) : Linkin Park, Papa Roach, Slipknot
- 
 Pistes :
- 
 Festival Opener(120 secondes)
-
-
 All - Stars Jam Session(340 secondes)

@@ -4,6 +4,7 @@ using Ex02.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ex02.Migrations
 {
     [DbContext(typeof(MusicLabelContext))]
-    partial class MusicLabelContextModelSnapshot : ModelSnapshot
+    [Migration("20260917133920_update_relations")]
+    partial class update_relations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,8 +65,7 @@ namespace Ex02.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("LabelId")
-                        .HasColumnType("int")
-                        .HasColumnName("label_id");
+                        .HasColumnType("int");
 
                     b.Property<string>("StageName")
                         .IsRequired()

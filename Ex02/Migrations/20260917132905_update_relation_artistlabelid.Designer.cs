@@ -4,6 +4,7 @@ using Ex02.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ex02.Migrations
 {
     [DbContext(typeof(MusicLabelContext))]
-    partial class MusicLabelContextModelSnapshot : ModelSnapshot
+    [Migration("20260917132905_update_relation_artistlabelid")]
+    partial class update_relation_artistlabelid
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -71,14 +74,21 @@ namespace Ex02.Migrations
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("stage_name");
 
-                    b.HasKey("Id");
+                    b.Property<int>("label_id")
+                        .HasColumnType("int");
 
-                    b.HasIndex("LabelId");
+                    b.HasKey("Id");
 
                     b.HasIndex("StageName")
                         .IsUnique();
 
-                    b.ToTable("artists", (string)null);
+                    b.HasIndex("label_id");
+
+                    b.ToTable("artists", null, t =>
+                        {
+                            t.Property("label_id")
+                                .HasColumnName("label_id1");
+                        });
                 });
 
             modelBuilder.Entity("Ex02.Entities.Label", b =>
@@ -159,7 +169,7 @@ namespace Ex02.Migrations
                 {
                     b.HasOne("Ex02.Entities.Label", "Label")
                         .WithMany("Artists")
-                        .HasForeignKey("LabelId")
+                        .HasForeignKey("label_id")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 

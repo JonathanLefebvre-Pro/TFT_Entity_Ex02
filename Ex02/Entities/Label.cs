@@ -7,5 +7,10 @@
         public DateTime FormedDate { get; set; }
 
         public virtual ICollection<Artist> Artists { get; set; }
+
+        public Label()
+        {
+            Artists = new HashSet<Artist>();
+        }
     }
 }

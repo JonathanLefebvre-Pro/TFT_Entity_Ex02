@@ -56,15 +56,20 @@ namespace Ex02.Context
             modelBuilder.Entity<Artist>().Property(x => x.StageName).HasColumnName("stage_name")
                 .HasMaxLength(100).IsRequired();
             modelBuilder.Entity<Artist>().Property(x => x.LabelId).HasColumnName("label_id");
-            //modelBuilder.Entity<Artist>(). .Property(x => x.Label).HasColumnName("label");
+            //modelBuilder.Entity<Artist>().HasOne(x => x.Label).WithMany(x => x.Artists).HasForeignKey("label_id");
 
             //Relations
             //modelBuilder.Entity<Artist>().HasOne(x => x.Label);
             modelBuilder.Entity<Artist>().HasMany(x => x.Albums).WithMany(x => x.Artists)
-                .UsingEntity("artist_albums",
-                r => r.HasOne(typeof(Album)).WithMany().HasForeignKey("AlbumsId"),
-                l => l.HasOne(typeof(Artist)).WithMany().HasForeignKey("ArtistsId"),
-                j => j.HasKey("album_id", "artist_id")
+                .UsingEntity("artists_albums",
+                //r => r.HasOne(typeof(Album)).WithMany().HasForeignKey("AlbumsId"),
+                //l => l.HasOne(typeof(Artist)).WithMany().HasForeignKey("ArtistsId"),
+                j => 
+                { 
+                    j.Property("AlbumsId").HasColumnName("album_id");
+                    j.Property("ArtistsId").HasColumnName("artist_id");
+                    //j.HasKey("album_id", "artist_id")
+                }
                );
             //
 

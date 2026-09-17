@@ -6,6 +6,7 @@
         public required string Title { get; set; }
         public float DurationInSeconds { get; set; }
         public int AlbumId { get; set; }
-        public Album Album { get; set; }
+
+        public virtual Album Album { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using Ex02.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ex02.Migrations
 {
     [DbContext(typeof(MusicLabelContext))]
-    partial class MusicLabelContextModelSnapshot : ModelSnapshot
+    [Migration("20260917114059_update_realtion_albumartist_keys")]
+    partial class update_realtion_albumartist_keys
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -138,7 +141,7 @@ namespace Ex02.Migrations
                     b.ToTable("tracks", (string)null);
                 });
 
-            modelBuilder.Entity("artists_albums", b =>
+            modelBuilder.Entity("artist_albums", b =>
                 {
                     b.Property<int>("AlbumsId")
                         .HasColumnType("int")
@@ -152,7 +155,7 @@ namespace Ex02.Migrations
 
                     b.HasIndex("ArtistsId");
 
-                    b.ToTable("artists_albums");
+                    b.ToTable("artist_albums");
                 });
 
             modelBuilder.Entity("Ex02.Entities.Artist", b =>
@@ -177,7 +180,7 @@ namespace Ex02.Migrations
                     b.Navigation("Album");
                 });
 
-            modelBuilder.Entity("artists_albums", b =>
+            modelBuilder.Entity("artist_albums", b =>
                 {
                     b.HasOne("Ex02.Entities.Album", null)
                         .WithMany()
