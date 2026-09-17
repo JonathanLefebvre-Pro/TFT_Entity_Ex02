@@ -1,0 +1,42 @@
+﻿### 1. Entités à modéliser
+***Label * * : Id, Name, FormedDate
+* **Artist** : Id, StageName, Bio, LabelId
+* **Album** : Id, Title, ReleaseDate
+* **Track** : Id, Title, DurationInSeconds, AlbumId
+
+### 2. Relations à implémenter
+* Un **Label* *possède plusieurs **Artists** (1-N).
+* Un **Artist** est rattaché à un seul **Label**.
+* Un **Artist** peut participer à plusieurs **Albums** et un **Album** peut inclure plusieurs **Artists** (N-N pour les collaborations).
+* Un **Album** contient plusieurs **Tracks** (1-N).
+* Une **Track** appartient à un seul **Album**.
+
+### 3. Étapes du travail à réaliser
+
+#### Étape 1 : Configuration du projet
+1. Créez un projet Console C#.
+2. Installez les packages NuGet requis pour Entity Framework et le provider SQL Server.
+3. Configurez la chaîne de connexion (`connectionString`) dans votre fichier de configuration (`appsettings.json` ou `app.config`).
+
+#### Étape 2 : Création des classes POCO
+1. Créez les classes du domaine dans un dossier `Entities`.
+2. **Contrainte :**N'utilisez **aucune Data Annotation** (`[Key]`, `[Required]`, etc.). Utilisez uniquement des propriétés C# simples et des collections (`ICollection<T>`).
+
+#### Étape 3 : Création et configuration du DbContext
+1.Créez la classe `MusicLabelContext` qui hérite de `DbContext`.
+2. Déclarez les `DbSet<T>` pour chaque entité.
+3. Surchargez la méthode `OnModelCreating(ModelBuilder modelBuilder)` pour appliquer les configurations suivantes via Fluent API :
+   ***Label :**Name obligatoire, longueur max 100.
+   * **Artist :**StageName obligatoire, longueur max 100.
+   * **Album :**Title obligatoire, longueur max 150.
+   * **Track :**Title obligatoire, longueur max 150.
+   * **Relation Label -> Artist :**Désactivez la suppression en cascade : OnDelete(DeleteBehavior.Restrict).
+   * **Relation N-N Artist <-> Album :**Nommez explicitement la table de jonction `ArtistAlbums` et les colonnes `ArtistId` et `AlbumId`.
+
+
+
+   Commands :
+
+   enable-migrations
+   add-migration "migration-name"
+   update-database
