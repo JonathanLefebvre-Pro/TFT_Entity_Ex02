@@ -1,5 +1,4 @@
-﻿using Azure;
-using Ex02.Entities;
+﻿using Ex02.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ex02.Context
@@ -64,8 +63,8 @@ namespace Ex02.Context
                 .UsingEntity("artists_albums",
                 //r => r.HasOne(typeof(Album)).WithMany().HasForeignKey("AlbumsId"),
                 //l => l.HasOne(typeof(Artist)).WithMany().HasForeignKey("ArtistsId"),
-                j => 
-                { 
+                j =>
+                {
                     j.Property("AlbumsId").HasColumnName("album_id");
                     j.Property("ArtistsId").HasColumnName("artist_id");
                     //j.HasKey("album_id", "artist_id")
